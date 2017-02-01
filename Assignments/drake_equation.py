@@ -50,6 +50,6 @@ time.sleep(2.0)
 print("")
 print("And the answer is...")
 
-print = str((R)*(p)*(n)*(f)*(i)*(c)*(L))
-
+print(str((R)*(p/100)*(n)*(f/100)*(i/100)*(c/100)*(L)))
+print("")
 print("Ta Da! Thanks for using!")
