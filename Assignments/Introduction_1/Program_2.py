@@ -10,7 +10,6 @@
 #4. Outputs result and asks if they wish to input another value
 #5. If so, runs again, if not says bye and terminates program
 #-------------------------------------------------------------------------------
-import time
 #Instructional Text
 print("Welcome to another exponent program! Lets do some stuff!")
 print("This program will ask for a power of two, and then output the result.\n Lets try it out!")
