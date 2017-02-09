@@ -25,7 +25,7 @@ print("")
 #Output top side
 print("*"*w)
 #Output right/left sides
-n = h
+n = h -2
 while n != 0:
     print("*"+(" "*(w-2))+"*")
     n= n-1
