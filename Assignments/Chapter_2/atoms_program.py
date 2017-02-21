@@ -16,15 +16,21 @@
 #atoms = weight in kg/70*7e27
 #Average weight of a person= 70kg
 #number of atoms in a person = 7e27
-#(Percent of the universe/atoms in the universe[7e27]) * 100
+#(Percent of the universe/atoms in the universe[10e80]) * 100
 #-------------------------------------------------------------------------------
+#Initialize
+num_atoms_universe = 10e80
+#greeting
+print("This program will figure out your place in the universe by telling you")
+print("what percent of the universe you make up. Prepare to feel insignifigant.")
 #prompt user weight in lb
 weight_lb = float(input("Please enter your weight in pounds: "))
 #convert to kg
-weight_kg = float(weight_lb*(1/2.2))
+weight_kg = float(weight_lb*2.2)
 #calculate percent of the universe
-percent_of_universe = float(weight_kg/70.0*7e27)
+num_atoms = float(weight_kg/70.0*7e27)
 #calculate answer
-ans = float((percent_of_universe/7e27)*100)
+ans = float((num_atoms/num_atoms_universe)*100)
 #display answer
-print("You take up: "+format(ans, '0.2f')+"% of the universe.")
+print("You contain around "+ format(num_atoms, '0.2e')+" atoms.")
+print("You take up: "+format(ans, '0.2e')+"% of the universe.")
