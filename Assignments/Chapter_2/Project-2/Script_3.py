@@ -18,5 +18,5 @@ float_2 = float(input("Please input the second number here: "))
 #Divide and store result
 result = float_1/float_2
 #Print result
-print("The answer is: {:.2e}".format(result))
+print("The answer is: "+format(result,'0.6e'))
 #End Program
