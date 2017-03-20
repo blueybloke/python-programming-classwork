@@ -17,7 +17,7 @@ print("Hello, this is a script to estimate how much wheat the creator of the "
 "LOT of wheat. This program shows exactly how much wheat that is.")
 #Assign variables
 num_of_grains = 1
-i = 1
+i = 0
 #Begin loop
 while (i < 64):
     #Double the amount of grain
@@ -25,7 +25,7 @@ while (i < 64):
     #Add one to the iteration value
     i = i + 1
     #Uncomment line below to get the debug text.
-    #print("Now on iteration "+str(i)+" I have "+str(num_of_grains)+" grains.\n")
+    print("Now on iteration "+str(i)+" I have "+str(num_of_grains)+" grains.\n")
 #Convert to pounds
 weight = num_of_grains/7000
 #Format & print
