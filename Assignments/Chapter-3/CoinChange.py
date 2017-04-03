@@ -21,27 +21,27 @@
 from random import randint
 
 #Set variables
-end = False
+terminate = False
 coins = []
 valid_coins = [1,5,10,25]
 #Greeting
-print("""                                     
-                       88              
-                       ""                                                    
- ,adPPYba,  ,adPPYba,  88 8b,dPPYba,   
-a8"     "" a8"     "8a 88 88P'   `"8a  
-8b         8b       d8 88 88       88  
-"8a,   ,aa "8a,   ,a8" 88 88       88  
- `"Ybbd8"'  `"YbbdP"'  88 88       88                                        
+print("""
+                       88
+                       ""
+ ,adPPYba,  ,adPPYba,  88 8b,dPPYba,
+a8"     "" a8"     "8a 88 88P'   `"8a
+8b         8b       d8 88 88       88
+"8a,   ,aa "8a,   ,a8" 88 88       88
+ `"Ybbd8"'  `"YbbdP"'  88 88       88
 """)
 print("The purpose of this exercise is to enter a number of coin values that",
 "\nadd up to a displayed target value.\n")
 #Instructions
 print("\nEnter Coins values as 1-penny, 5-nickel, 10-dime, and 25-quarter.",
 "\nHit return after the last entered coin value.")
-print("-----------------------------------------------------------------------")
+print("="*80)
 #Being program loop
-while (end == False):
+while (terminate == False):
     #Reset amount of coins
     coins = []
     #Choose amount
@@ -75,10 +75,10 @@ while (end == False):
     if (amount == sum(coins)):
         print("\nCorrect!")
     else:
-        print("\nSorry - you only entered "+str(sum(coins))+" cents!")
+        print("\nSorry - you entered "+str(sum(coins))+" cents!")
 
     #Ask to try again
     if(input("\nTry again (y/n)?: ") == "y"):
-        end = False
+        terminate = False
     else:
-        end = True
+        terminate = True
