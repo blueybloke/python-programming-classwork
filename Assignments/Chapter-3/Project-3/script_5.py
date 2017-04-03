@@ -38,21 +38,18 @@ while (terminate == False):
         except ValueError:
             print("Please enter a positive interger value for the term of",
             "the loan.")
-    #Calculate discounts
+    #Calculate discounts and print
     n = loan_term * 12
-    months_discount = []
     r = 3
+    print("Loan amount: "+str(loan_amount)+" Euro"+(" "*20),"Term: "+str(loan_term)+" years")
+    print("Interest Rate"+(" "*20)+"Monthly Payment")
+
+    loan_amount = int(loan_amount)
+
     while (r <= 18):
-        months_discount.append(int(loan_amount/(((1+r)^n - 1)/r(1+r)^n)))
+        monthly_value = loan_amount/(((1+r)^n-1)/r(1+r)^n)
+        print(r+"%"+(" "*20)+format(monthly_value, '0.2f')+" Euro")
         r = r + 1
-    #Begin printing table
-    print("-"*80)
-    print("")
-    print("loan Amount: "+str(loan_amount)+(" "*10)+"Term: "+str(loan_term)+ " years.")
-    print("Interest Rate"+(" "*52)+"Monthly Payment")
-    i = 3
-    while (i <= 18):
-        print(str(i)+"%"+(" "*((len(i)+1)+len(months_discount[i])+len(" Euro.")))+format(months_discount[i], "0.2f")+" Euro.")
     #---------------------------------------
     #Ask to use again
     if(input("\nUse Again (y/n)?: ") == "y"):
