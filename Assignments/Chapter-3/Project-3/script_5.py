@@ -39,10 +39,11 @@ while (terminate == False):
         except ValueError:
             print("Please enter a positive interger value for the term of",
             "the loan.")
+    #--------------------------------------
     #Calculate discounts and print
     n = loan_term * 12
     r = 3
-
+    
     #---------------------------------------
     #Ask to use again
     if(input("\nUse Again (y/n)?: ") == "y"):
