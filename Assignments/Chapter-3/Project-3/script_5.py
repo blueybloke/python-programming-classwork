@@ -47,8 +47,11 @@ while (terminate == False):
     loan_amount = int(loan_amount)
 
     while (r <= 18):
-        monthly_value = loan_amount/(((1+r)^n-1)/r(1+r)^n)
-        print(r+"%"+(" "*20)+format(monthly_value, '0.2f')+" Euro")
+        discount_factor = 0
+        discount_factor = ((1 + r) * n - 1) / r*(1 + r) * n
+        monthly_value = loan_amount / discount_factor
+        print(r,"%",(" "*20),format(monthly_value, '0.2f'),"Euro")
+        monthly_value = int(monthly_value)
         r = r + 1
     #---------------------------------------
     #Ask to use again
