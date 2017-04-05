@@ -23,7 +23,7 @@ while (terminate == False):
     #Reset variables
     loan_amount = 0
     loan_term = 0
-    #Ask for variables and error check them
+    #Get the loan amount
     while True:
         try:
             loan_amount = int(input("Please enter a amount for the loan: "))
@@ -31,6 +31,7 @@ while (terminate == False):
         except ValueError:
             print("Please enter a positive interger value for the amount of",
             "the loan.")
+    #Get the loan term
     while True:
         try:
             loan_term = int(input("Please enter a length for the loan: "))
@@ -41,18 +42,7 @@ while (terminate == False):
     #Calculate discounts and print
     n = loan_term * 12
     r = 3
-    print("Loan amount: "+str(loan_amount)+" Euro"+(" "*20),"Term: "+str(loan_term)+" years")
-    print("Interest Rate"+(" "*20)+"Monthly Payment")
 
-    loan_amount = int(loan_amount)
-
-    while (r <= 18):
-        discount_factor = 0
-        discount_factor = ((1 + r) * n - 1) / r*(1 + r) * n
-        monthly_value = loan_amount / discount_factor
-        print(r,"%",(" "*20),format(monthly_value, '0.2f'),"Euro")
-        monthly_value = int(monthly_value)
-        r = r + 1
     #---------------------------------------
     #Ask to use again
     if(input("\nUse Again (y/n)?: ") == "y"):
