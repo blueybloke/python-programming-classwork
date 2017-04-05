@@ -42,8 +42,19 @@ while (terminate == False):
     #--------------------------------------
     #Calculate discounts and print
     n = loan_term * 12
-    r = 3
-    
+    i = 3
+    print("Loan Amount: ",loan_amount," Euro")
+    print("Term: ",loan_term," years")
+    print("")
+    print("Intrest Rate ----------> Monthly Payment")
+    #Start calculation loop
+    while (i <= 18):
+        r = (i/100)/12
+        discount_factor = discount_factor / (r*(1+r)**n)
+        monthly_payment = loan_amount / discount_factor
+        #Print it all
+        print(i,"%","---------->",format(monthly_payment, '0.2f'),"Euro")
+        i = i + 1
     #---------------------------------------
     #Ask to use again
     if(input("\nUse Again (y/n)?: ") == "y"):
