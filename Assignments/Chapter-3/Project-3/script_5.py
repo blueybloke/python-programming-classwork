@@ -50,6 +50,7 @@ while (terminate == False):
     #Start calculation loop
     while (i <= 18):
         r = (i/100)/12
+        discount_factor = ((1+r)**n)-1
         discount_factor = discount_factor / (r*(1+r)**n)
         monthly_payment = loan_amount / discount_factor
         #Print it all
