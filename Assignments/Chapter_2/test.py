@@ -11,9 +11,9 @@
 #-------------------------------------------------------------------------------
 #Greeting
 print("Hello, this is a script to estimate how much wheat the creator of the "
-"board game Chess would have recieved from an Indian king in exchange for the "
+"board game Chess would have received from an Indian king in exchange for the "
 "game. He came up with a deal where for each square on the chess board the "
-"amount of grain he would recieve would be doubled, leading to him getting a "
+"amount of grain he would receive would be doubled, leading to him getting a "
 "LOT of wheat. This program shows exactly how much wheat that is.")
 #Assign variables
 num_of_grains = 1
